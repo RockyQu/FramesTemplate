@@ -1,20 +1,29 @@
 package ${packageName};
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
 
-import com.tool.common.base.simple.base.BaseSimpleActivity;
+import com.tool.common.base.simple.base.BaseSimpleFragment;
 import com.tool.common.frame.simple.ISimpleView;
-import com.tool.common.frame.simple.Message;
-
-import butterknife.BindView;
 
 import ${package}.R;
 
 /**
  * Please complete the comment.
  */
-public class ${moduleName}Activity extends BaseSimpleActivity<${presenterName}> implements ISimpleView {
+public class ${moduleName}Fragment extends BaseSimpleFragment<${presenterName}> implements ISimpleView {
+
+    /**
+     * Create Fragment
+     *
+     * @return
+     */
+    public static Fragment create(int index) {
+        ${moduleName}Fragment fragment = new ${moduleName}Fragment();
+        Bundle bundle = new Bundle();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
 
     @Override
     public void create(Bundle savedInstanceState) {

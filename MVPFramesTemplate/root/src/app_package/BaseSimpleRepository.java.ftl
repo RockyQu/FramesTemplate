@@ -3,11 +3,11 @@ package ${packageName};
 import com.tool.common.frame.IModel;
 import com.tool.common.integration.IRepositoryManager;
 
-public class ${moduleName}Repository implements IModel {
+public class ${repositoryName} implements IModel {
 
     private IRepositoryManager iRepositoryManager;
 
-    public ${moduleName}Repository(IRepositoryManager iRepositoryManager) {
+    public ${repositoryName}(IRepositoryManager iRepositoryManager) {
         this.iRepositoryManager = iRepositoryManager;
     }
 

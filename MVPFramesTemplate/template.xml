@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <template
     format="5"
-    revision="5"
+    revision="1" 
     name="MVPFrames" 
     minApi="9"
     minBuildApi="15"
-    description="适用于 MVPFrames 开发框架，一键快速生面 MVP 模板">
+    description="快速一键生成 MVP 模板，适用于 MVPFrames 开发框架">
 
     <!-- 主分类 -->
     <category value="Frames" />
@@ -29,8 +29,6 @@
         name="Module Name"
         type="string"
         constraints="class|unique|nonempty"
-        suggest="${layoutToActivity(layoutName)}"
-        default="MainActivity"
         help="模块名称 例：UserActivity 填写 User 即可" />
 
     <!-- 是否创建布局 -->
@@ -47,52 +45,57 @@
         name="Layout Name"
         type="string"
         constraints="layout|unique|nonempty"
-        suggest="${activityToLayout(moduleName)}"
-        default="activity_main"
+        suggest="_${classToResource(moduleName)}"
         visibility="generateLayout"
         help="创建一个与模块对应的布局文件" />
 
+    <!-- 引入 R 文件时所用的包名 -->
     <parameter
-        id="instantAppActivityHost"
-        name="Instant App URL Host"
+        id="package"
+        name="Package Name"
         type="string"
-        suggest="${companyDomain}"
-        default="instantapp.example.com"
-        visibility="isInstantApp!false"
-        help="The domain to use in the Instant App route for this activity"/>
+        default="com." 
+        help="引入 R 文件，以及创建 Entity 时所用的包名，例：com.mycompany.myapp"/>
 
+    <!-- Presenter -->
     <parameter
-        id="instantAppActivityRouteType"
-        name="Instant App URL Route Type"
-        type="enum"
-        default="pathPattern"
-        visibility="isInstantApp!false"
-        help="The type of route to use in the Instant App route for this activity" >
-        <option id="path">Path</option>
-        <option id="pathPrefix">Path Prefix</option>
-        <option id="pathPattern">Path Pattern</option>
-    </parameter>
-
-    <parameter
-        id="instantAppActivityRoute"
-        name="Instant App URL Route"
+        id="presenterName"
+        name="Presenter Name"
         type="string"
-        default="/.*"
-        visibility="isInstantApp!false"
-        help="The route to use in the Instant App route for this activity"/>
-    
+        suggest="${moduleName}Presenter"
+        help="Presenter 名称"/>
+
+    <!-- Repository -->
+    <parameter
+        id="repositoryName"
+        name="Repository Name"
+        type="string"
+        suggest="${moduleName}Repository"
+        help="Repository 名称"/>
+
+    <!-- 是否创建 Entity -->
+    <parameter
+        id="isEntity"
+        name="Generate Entity File"
+        type="boolean"
+        default="false"
+        help="此选项将创建一个对应的 Entity 文件" />
+
+    <!-- Entity -->
+    <parameter
+        id="entityName"
+        name="Entity Name"
+        type="string"
+        visibility="isEntity"
+        suggest="${moduleName}"
+        help="Entity 名称"/>
+
     <parameter
         id="packageName"
-        name="Package name"
+        name="Directory"
         type="string"
         constraints="package"
         default="com.mycompany.myapp" />
-
-    <!-- 128x128 thumbnails relative to template.xml -->
-    <thumbs>
-        <!-- default thumbnail is required -->
-        <thumb>template_blank_activity.png</thumb>
-    </thumbs>
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
