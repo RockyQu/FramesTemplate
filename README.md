@@ -8,3 +8,4 @@
 ![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template6.png)
 
 ## 使用
+![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template8.png)
