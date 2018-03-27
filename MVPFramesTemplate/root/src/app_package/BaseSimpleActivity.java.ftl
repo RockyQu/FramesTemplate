@@ -1,13 +1,10 @@
 package ${packageName};
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 
 import com.tool.common.base.simple.base.BaseSimpleActivity;
 import com.tool.common.frame.simple.ISimpleView;
 import com.tool.common.frame.simple.Message;
-
-import butterknife.BindView;
 
 import ${package}.R;
 

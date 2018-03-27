@@ -31,6 +31,13 @@
         constraints="class|unique|nonempty"
         help="模块名称 例：UserActivity 填写 User 即可" />
 
+    <!-- 模块子目录名称 -->
+    <parameter
+        id="moduleFolder"
+        type="string"
+        suggest="${classToResource(moduleName)}"
+        visibility="false" />
+
     <!-- 是否创建布局 -->
     <parameter
         id="generateLayout"
