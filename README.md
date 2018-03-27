@@ -1,2 +1,6 @@
 # FramesTemplate
-快速构建模块模板，需要配合 MVPFrames 使用
+基于 Android Studio Template 代码自动生成模板，适用于 MVPFrames 开发框架
+
+## 安装
+
+## 使用
