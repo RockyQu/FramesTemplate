@@ -4,37 +4,41 @@
 <!-- 创建相关类文件 -->
 <#if templateType == 'templateTypeActivity'>
     <instantiate from="root/src/app_package/BaseSimpleActivity.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
 
     <instantiate from="root/src/app_package/BaseSimplePresenter.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
 
     <instantiate from="root/src/app_package/BaseSimpleRepository.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
 
     <#if generateLayout>
     	<instantiate from="root/res/layout/activity_simple.xml.ftl"
-                   to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
+                     to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 	</#if>
+
+    <merge from="root/AndroidManifest.xml.ftl"
+           to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
+           
 <#elseif  templateType == 'templateTypeFragment'>
     <instantiate from="root/src/app_package/BaseSimpleFragment.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Fragment.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Fragment.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
 
     <instantiate from="root/src/app_package/BaseSimplePresenter.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
 
     <instantiate from="root/src/app_package/BaseSimpleRepository.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
+                 to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
 
     <#if generateLayout>
     	<instantiate from="root/res/layout/fragment_simple.xml.ftl"
-                   to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
+                     to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 	</#if>
 <#else>
 	<!-- Reserve -->
@@ -44,6 +48,5 @@
       <instantiate from="root/src/app_package/entity/Entity.java.ftl"
                    to="${escapeXmlAttribute(resOut)}/${entityName}.java" />
 </#if>
-
 
 </recipe>
