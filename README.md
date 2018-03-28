@@ -19,3 +19,6 @@
 
 ## Usage
 ![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template8.png)
+
+## Tutorial
+关于如何编写一个 Android Studio Template 参考[基于 Android Studio Template 开发一款 MVP 代码自动生成模板](http://rockycoder.cn/template/2018/03/10/Android-Studio-Template.html)
