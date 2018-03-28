@@ -1,5 +1,5 @@
 # FramesTemplate
-基于 Android Studio Template 代码自动生成模板，适用于 MVPFrames 开发框架
+基于 Android Studio Template 代码自动生成模板，适用于 [MVPFrames](https://github.com/RockyQu/MVPFrames) 开发框架
 
 ## Features  
 - [x] 只需输入模块名称即可一键快速生成整套 MVP 代码
