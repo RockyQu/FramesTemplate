@@ -18,7 +18,7 @@
 ![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template6.png)
 
 ## Usage
-![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template9.png)
+![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template9.gif)
 ![](https://github.com/RockyQu/FramesTemplate/blob/master/ImageFolder/template8.png)
 
 ## Tutorial
