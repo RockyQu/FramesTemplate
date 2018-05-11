@@ -1,9 +1,9 @@
 package ${packageName};
 
 import com.tool.common.di.component.AppComponent;
-import com.tool.common.frame.simple.BaseSimplePresenter;
+import com.tool.common.frame.BasePresenter;
 
-public class ${presenterName} extends BaseSimplePresenter<${repositoryName}> {
+public class ${presenterName} extends BasePresenter<${repositoryName}> {
 
     // AppComponent
     private AppComponent component;

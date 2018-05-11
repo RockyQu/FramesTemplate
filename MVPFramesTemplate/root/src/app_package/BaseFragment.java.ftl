@@ -3,15 +3,15 @@ package ${packageName};
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import com.tool.common.base.simple.base.BaseSimpleFragment;
-import com.tool.common.frame.simple.ISimpleView;
+import com.tool.common.base.BaseFragment;
+import com.tool.common.frame.IView;
 
 import ${package}.R;
 
 /**
  * Please complete the comment.
  */
-public class ${moduleName}Fragment extends BaseSimpleFragment<${presenterName}> implements ISimpleView {
+public class ${moduleName}Fragment extends BaseFragment<${presenterName}> implements IView {
 
     /**
      * Create Fragment

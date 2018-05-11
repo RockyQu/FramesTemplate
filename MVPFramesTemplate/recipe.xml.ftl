@@ -3,15 +3,15 @@
 
 <!-- 创建相关类文件 -->
 <#if templateType == 'templateTypeActivity'>
-    <instantiate from="root/src/app_package/BaseSimpleActivity.java.ftl"
+    <instantiate from="root/src/app_package/BaseActivity.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
 
-    <instantiate from="root/src/app_package/BaseSimplePresenter.java.ftl"
+    <instantiate from="root/src/app_package/BasePresenter.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
 
-    <instantiate from="root/src/app_package/BaseSimpleRepository.java.ftl"
+    <instantiate from="root/src/app_package/BaseRepository.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
 
@@ -24,15 +24,15 @@
            to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
            
 <#elseif  templateType == 'templateTypeFragment'>
-    <instantiate from="root/src/app_package/BaseSimpleFragment.java.ftl"
+    <instantiate from="root/src/app_package/BaseFragment.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Fragment.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Activity.java" />
 
-    <instantiate from="root/src/app_package/BaseSimplePresenter.java.ftl"
+    <instantiate from="root/src/app_package/BasePresenter.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Presenter.java" />
 
-    <instantiate from="root/src/app_package/BaseSimpleRepository.java.ftl"
+    <instantiate from="root/src/app_package/BaseRepository.java.ftl"
                  to="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
     <open file="${escapeXmlAttribute(srcOut)}/${moduleName}Repository.java" />
 
